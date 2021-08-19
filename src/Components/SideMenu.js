@@ -3,6 +3,26 @@ import logo from "../Assets/logo.png";
 import user from "../Assets/Pic.jpg";
 import MenuItem from "./MenuItem";
 
+const menuItem = [
+    { name: "Dashboard", to: "/", iconClassName: "bi bi-speedometer2" },
+    {
+        name: "Opportunities",
+        to: "/opportunities",
+        iconClassName: "bi bi-newspaper"
+    },
+    {
+        name: "Transfer",
+        to: "/transfer",
+        iconClassName: "bi bi-arrow-left-right",
+        subMenus: [{ name: "Application" }, { name: "POC Details" }]
+    },
+    {
+        name: "IT Cell",
+        to: "/itcell",
+        iconClassName: "bi bi-telephone"
+    }
+]
+
 const SideMenu = (props) => {
     const [inactive, setInactive] = useState(false);
 
@@ -28,6 +48,24 @@ const SideMenu = (props) => {
         </div>
         <div className="main-menu">
             <ul>
+                {
+                    menuItem.map((menuItem, index) => (
+                        <MenuItem
+                            key={index}
+                            name={menuItem.name}
+                            to={menuItem.to}
+                            subMenus={menuItem.subMenus || []}
+                            iconClassName={menuItem.iconClassName}
+                            onClick={() => {
+                                if (inactive) {
+                                    setInactive(false);
+                                }
+                            }
+                            }
+                        />
+                    ))
+                }
+                {/*
                 <li>
                     <a className="menu-item">
                         <div className="menu-icon">
@@ -55,7 +93,7 @@ const SideMenu = (props) => {
                         </div>
                         <span>IT Cell</span>
                     </a>
-                </li>
+                </li>*/}
             </ul>
 
         </div>
