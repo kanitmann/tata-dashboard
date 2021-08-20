@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../Assets/logo.png";
 import user from "../Assets/Pic.jpg";
 import MenuItem from "./MenuItem";
@@ -25,6 +25,17 @@ const menuItem = [
 
 const SideMenu = (props) => {
     const [inactive, setInactive] = useState(false);
+
+    useEffect(() => {
+        if (inactive) {
+            document.querySelectorAll(".sub-menu").forEach((el) => {
+                el.classList.remove("active");
+            });
+        }
+
+        props.onCollapse(inactive);
+    }
+        , [inactive]);
 
     return (<div className={`side-menu ${inactive ? "inactive" : ""}`}>
         <div className="top-section">

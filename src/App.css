@@ -175,7 +175,7 @@ body {
   transition: opacity 0.2s ease-in;
 }
 
-.side-menu.inctive .side-menu-footer .user-info {
+.side-menu.inactive .side-menu-footer .user-info {
   opacity: 0;
   width: 0;
   height: 0;
@@ -211,3 +211,14 @@ body {
   border-radius: 1px;
   background: #333;
 }
+
+.container{
+  margin-left: 320px;
+  transition: margin-left 0.2s ease-in;
+  padding-top: 20px;
+}
+
+.container.inactive{
+  margin-left: 120px;
+}
+
