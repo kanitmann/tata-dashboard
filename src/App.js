@@ -47,19 +47,19 @@ function App() {
             <Route exact path={"/"}>
               <Dashboard />
             </Route>
-            <Route path={"/Opportunities"}>
+            <Route path={"/opportunities"}>
               <Opportunities />
             </Route>
-            <Route path={"/Transfer"}>
+            <Route exact path={"/transfer"}>
               <Transfer />
             </Route>
-            <Route path={"/Transfer/Application"}>
+            <Route path={"/transfer/application"}>
               <Application />
             </Route>
-            <Route path={"/Transfer/POCDetails"}>
+            <Route path={"/transfer/pocdetails"}>
               <POCDetails />
             </Route>
-            <Route path={"/ITCell"}>
+            <Route path={"/itcell"}>
               <ITCell />
             </Route>
           </Switch>

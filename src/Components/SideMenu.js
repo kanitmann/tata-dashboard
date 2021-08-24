@@ -4,7 +4,7 @@ import user from "../Assets/Pic.jpg";
 import MenuItem from "./MenuItem";
 
 const menuItem = [
-    { name: "Dashboard", to: "/", iconClassName: "bi bi-speedometer2" },
+    { name: "Dashboard", exact: true, to: "/", iconClassName: "bi bi-speedometer2" },
     {
         name: "Opportunities",
         to: "/opportunities",
@@ -12,9 +12,10 @@ const menuItem = [
     },
     {
         name: "Transfer",
+        exact: true,
         to: "/transfer",
         iconClassName: "bi bi-arrow-left-right",
-        subMenus: [{ name: "Application" }, { name: "POC Details" }]
+        subMenus: [{ name: "Application", to: "/transfer/application" }, { name: "POC Details", to: "/transfer/pocdetails" }]
     },
     {
         name: "IT Cell",
@@ -64,6 +65,7 @@ const SideMenu = (props) => {
                         <MenuItem
                             key={index}
                             name={menuItem.name}
+                            exact = {menuItem.exact}
                             to={menuItem.to}
                             subMenus={menuItem.subMenus || []}
                             iconClassName={menuItem.iconClassName}

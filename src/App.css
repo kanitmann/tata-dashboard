@@ -106,6 +106,12 @@ body {
   font-weight: 600;
 }
 
+.side-menu .main-menu .menu-item.active {
+  background: rgb(231, 231, 231);
+  border-radius: 5px;
+  color: rgb(16, 78, 172);
+}
+
 .side-menu .main-menu {
   margin: 5px 0;
   cursor: pointer;
@@ -140,6 +146,17 @@ body {
   margin: 5px 0;
   display: block;
   font-weight: 600;
+  text-decoration: none;
+  color: rgb(117, 117, 117);
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.side-menu .main-menu .sub-menu a.active {
+  display: block;
+  background: rgb(231, 231, 231);
+  border-radius: 5px;
+  color: rgb(16, 78, 172);
 }
 
 .side-menu-footer {
@@ -212,13 +229,12 @@ body {
   background: #333;
 }
 
-.container{
+.container {
   margin-left: 320px;
   transition: margin-left 0.2s ease-in;
   padding-top: 20px;
 }
 
-.container.inactive{
+.container.inactive {
   margin-left: 120px;
 }
-
