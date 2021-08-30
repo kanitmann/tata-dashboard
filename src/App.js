@@ -1,5 +1,13 @@
 import './App.css';
+import 'react-app-polyfill/stable'
+import 'core-js'
 import SideMenu from './Components/SideMenu';
+import DashBoard from './Components/DashBoard';
+import Opportunities from './Components/Opportunities';
+import Transfer from './Components/Transfer';
+import Application from './Components/Application';
+import POCDetails from './Components/POCDetails';
+import ITCell from './Components/ITCell';
 
 import {
   BrowserRouter as Router,
@@ -8,29 +16,6 @@ import {
 } from "react-router-dom";
 import { useState } from 'react';
 
-const Dashboard = () => {
-  return <h1>Dashboard</h1>;
-};
-
-const Opportunities = () => {
-  return <h1>Opportunities</h1>;
-};
-
-const Transfer = () => {
-  return <h1>Transfer</h1>;
-};
-
-const Application = () => {
-  return <h1>Application</h1>;
-};
-
-const POCDetails = () => {
-  return <h1>POC Details</h1>;
-};
-
-const ITCell = () => {
-  return <h1>IT Cell</h1>;
-};
 
 function App() {
 
@@ -45,7 +30,7 @@ function App() {
         <div className={`container ${inactive ? 'inactive': ''}`}>
           <Switch>
             <Route exact path={"/"}>
-              <Dashboard />
+              <DashBoard />
             </Route>
             <Route path={"/opportunities"}>
               <Opportunities />
