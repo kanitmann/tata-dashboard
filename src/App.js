@@ -27,7 +27,7 @@ function App() {
           onCollapse={(inactive) => {
             setInactive(inactive);
           }} />
-        <div className={`container ${inactive ? 'inactive': ''}`}>
+        <div className={`container1 ${inactive ? 'inactive': ''}`}>
           <Switch>
             <Route exact path={"/"}>
               <DashBoard />
