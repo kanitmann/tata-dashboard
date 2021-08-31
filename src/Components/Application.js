@@ -12,6 +12,10 @@ import { green } from '@material-ui/core/colors';
 import Button from '@material-ui/core/Button';
 import Fab from '@material-ui/core/Fab';
 import SaveIcon from '@material-ui/icons/Save';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import Select from '@material-ui/core/Select';
+import NativeSelect from '@material-ui/core/NativeSelect';
 
 const Application = makeStyles((theme) => ({
   root: {
@@ -20,6 +24,7 @@ const Application = makeStyles((theme) => ({
       width: '25ch',
     },
   },
+  
   wrapper: {
     margin: theme.spacing(1),
     position: 'relative',
@@ -45,6 +50,13 @@ const Application = makeStyles((theme) => ({
     left: '50%',
     marginTop: -12,
     marginLeft: -12,
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
   },
 }));
 
@@ -74,20 +86,37 @@ export default function FormPropsTextFields() {
       }, 2000);
     }
   };
+    const [state, setState] = React.useState({
+    location: '',
+    name: 'hai',
+  });
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    setState({
+      ...state,
+      [name]: event.target.value,
+    });
+  }
 
   return (
-    <form className={classes.root} noValidate autoComplete="off">
+    <form className={classes.root} noValidate autoComplete="on">
       <div>
         <div className="Heading1">
           <h1>
             Application
           </h1>
         </div>
+        <div className="subheading1">
+            <h2>Current Details</h2>
+        </div>
         <br></br>
         <TextField disabled id="standard-disabled" label="First Name" defaultValue="Kanit" />
         <TextField disabled id="standard-disabled" label="Last Name" defaultValue="Mann" />
         <br></br>
-        <TextField disabled id="standard-disabled" label="Current Position" defaultValue="Web Developer" />
+        <TextField disabled id="standard-disabled" label="Position" defaultValue="Web Developer" />
+        <TextField disabled id="standard-disabled" label="Department" defaultValue="IT" />
+        <TextField disabled id="standard-disabled" label="Location" defaultValue="NCR" />
         <br></br>
         <TextField disabled id="standard-disabled" label="Time Since Last Transfer" defaultValue="3 Years 7 Months" />
         <br></br>
@@ -97,7 +126,60 @@ export default function FormPropsTextFields() {
         <br></br>
         <Divider />
         <br></br>
+        <div className="subheading2">
+            <h2>Transfer Details</h2>
+        </div>
+        <TextField required id="standard-required" label="Job Opening Code" />
+        <TextField required id="standard-required" label="Position" />
+        <TextField required id="standard-required" label="Department" />
+        <FormControl className={classes.formControl}>
+            <InputLabel htmlFor="location-native-simple">Location</InputLabel>
+            <Select
+              native
+              value={state.location}
+              onChange={handleChange}
+              inputProps={{
+                name: 'location',
+                id: 'location-native-simple',
+              }}
+            >
+              <option aria-label="None" value="" />
+              <option value={"NCR"}>NCR</option>
+              <option value={"Banglore"}>Banglore</option>
+              <option value={"Gujarat"}>Gujarat</option>
+            </Select>
+          </FormControl>
+    </div>
+    <br></br>
+    <TextField
+          id="outlined-multiline-static"
+          label="Reason for Transfer"
+          multiline
+          helperText = "About 250 - 500 words"
+          required
+          style = {{width: '100ch'}}
+          rows={6}
+          variant="outlined"
+        />
+    <div className={classes.root}>
+    <div className={classes.wrapper}>
+      <Fab
+        aria-label="save"
+        color="primary"
+        className={buttonClassname}
+        onClick={handleButtonClick}
+      >
+        {success ? <CheckIcon /> : <SaveIcon />}
+      </Fab>
+      {loading && <CircularProgress size={68} className={classes.fabProgress} />}
+    </div>
+    <div className={classes.wrapper}>
+      {loading && <CircularProgress size={24} className={classes.buttonProgress} />}
+    </div>
+
     </div>
     </form>
+
+
   );
 }
