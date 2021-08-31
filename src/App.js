@@ -7,7 +7,7 @@ import Opportunities from './Components/Opportunities';
 import Transfer from './Components/Transfer';
 import Application from './Components/Application';
 import POCDetails from './Components/POCDetails';
-import ITCell from './Components/ITCell';
+import Contact from './Components/Contact';
 
 import {
   BrowserRouter as Router,
@@ -44,8 +44,8 @@ function App() {
             <Route path={"/transfer/pocdetails"}>
               <POCDetails />
             </Route>
-            <Route path={"/itcell"}>
-              <ITCell />
+            <Route path={"/contact"}>
+              <Contact />
             </Route>
           </Switch>
         </div>

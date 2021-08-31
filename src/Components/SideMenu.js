@@ -18,8 +18,8 @@ const menuItem = [
         subMenus: [{ name: "Application", to: "/transfer/application" }, { name: "POC Details", to: "/transfer/pocdetails" }]
     },
     {
-        name: "IT Cell",
-        to: "/itcell",
+        name: "Contact Us",
+        to: "/contact",
         iconClassName: "bi bi-telephone"
     }
 ]
