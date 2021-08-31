@@ -17,6 +17,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+
 .side-menu {
   position: fixed;
   background: black;
@@ -237,16 +238,4 @@ body {
 
 .container1.inactive {
   margin-left: 120px;
-}
-
-
-.CardUI .overflow{
-  display: inline-block;
-  box-shadow: #000;
-}
-
-.CardUI img{
-  height: 200px;
-  width: 350px;
-  border-radius: 25px;
 }
