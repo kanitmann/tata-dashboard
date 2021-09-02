@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const MenuItem = (props) => {
 
-    const { name, subMenus, iconClassName, onClick, to, exact } = props;
+    const { name, subMenus, iconClassName, to } = props;
     const [expand, setExpand] = useState(false);
 
     return (

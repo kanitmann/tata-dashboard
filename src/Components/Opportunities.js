@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import img from "../Assets/logo.png";
+import React from 'react';
 import Cards from "./Cards"
 
 const Opportunities = (props) => {

@@ -239,3 +239,11 @@ body {
 .container1.inactive {
   margin-left: 120px;
 }
+
+.DashBoard {
+  text-align: center;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

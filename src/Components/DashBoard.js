@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const DashBoard = (props) => {
     return (
-        <h1>DASHBOARD</h1>
+        <h1>DashBoard</h1>
     );
 };
 
