@@ -1,10 +1,4 @@
-<!--START_SECTION:waka-->
-```text
-C          1 hr 10 mins    ███████████████████████▓░   94.52 % 
-C++        2 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   03.44 % 
-YAML       1 min           ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.33 % 
-```
-<!--END_SECTION:waka-->
+
 
 # Getting Started with Create React App
 
