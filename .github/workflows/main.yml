@@ -19,4 +19,5 @@ jobs:
           # Branch - newer GitHub repositories have "main" as default branch, change to main in that case, default is master
           BRANCH: "master"
           # Manual Commit messages - write your own messages here
+          REPOSITORY: <kanitmann/tata-dashboard>
           COMMIT_MSG: "Automated Coding Activity Update :alien:"
