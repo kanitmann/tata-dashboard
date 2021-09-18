@@ -1,8 +1,12 @@
 import React from 'react';
+import Carousal from './Carousel.js'
 
 const DashBoard = (props) => {
     return (
-        <h1>DashBoard</h1>
+        <div className="crs">
+            <h1>DashBoard</h1>
+            <Carousal />
+        </div>
     );
 };
 
