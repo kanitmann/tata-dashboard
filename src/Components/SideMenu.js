@@ -78,35 +78,7 @@ const SideMenu = (props) => {
                         />
                     ))
                 }
-                {/*
-                <li>
-                    <a className="menu-item">
-                        <div className="menu-icon">
-                            <i class="bi bi-speedometer2"></i>
-                        </div>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a className="menu-item">
-                        <div className="menu-icon">
-                            <i class="bi bi-newspaper"></i>
-                        </div>
-                        <span>Opportunities</span>
-                    </a>
-                </li>
-                <MenuItem
-                    name={"Transfer"}
-                    subMenus={[{ name: "Application" }, { name: "POC Details" }]}
-                />
-                <li>
-                    <a className="menu-item">
-                        <div className="menu-icon">
-                            <i class="bi bi-telephone"></i>
-                        </div>
-                        <span>IT Cell</span>
-                    </a>
-                </li>*/}
+                {}
             </ul>
 
         </div>

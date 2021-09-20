@@ -17,7 +17,6 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-
 .side-menu {
   position: fixed;
   background: black;
@@ -230,6 +229,13 @@ body {
   background: #333;
 }
 
+.profile_card .divider2 {
+  width: 60%;
+  height: 1px;
+  border-radius: 1px;
+  background: rgb(221, 221, 221);
+}
+
 .container1 {
   margin-left: 320px;
   transition: margin-left 0.2s ease-in;
@@ -247,3 +253,20 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.profile_card {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.profile_card .picture img {
+  height: 35%;
+  width: 35%;
+  padding-bottom: 40px;
+  float: right;
+  padding-left: 100px;
+}
+
